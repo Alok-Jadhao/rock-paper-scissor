@@ -30,12 +30,12 @@ function playRound() {
         console.log("Draw");
     } else if((humanChoice == "stone" && computerChoice == "scissor") || (humanChoice == "paper" && computerChoice == "stone") || (humanChoice == "scissor" && computerChoice == "paper")) {
         humanScore++;
-        document.getElementById('result').value = "You win!";
+        document.getElementById('result').value = "You win! " + humanChoice + " beats " + computerChoice;
         console.log("You win");
     } else {
         computerScore++;
         document.getElementById('result').value = "You lose!";
-        console.log("You lose");
+        console.log("You lose " + computerChoice + " beats " + humanChoice);
     }
 
     if(humanScore == 5) {
